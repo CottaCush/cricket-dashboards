@@ -1,10 +1,9 @@
 <?php
 
-namespace app\widgets;
+namespace CottaCush\Cricket\Report\Widgets;
 
-use app\models\Dashboard;
-use app\models\Widget;
 use CottaCush\Cricket\Report\Generators\SQLQueryBuilderParser;
+use CottaCush\Cricket\Report\Models\Dashboard;
 use CottaCush\Yii2\Helpers\Html;
 use yii\db\Connection;
 use yii\helpers\ArrayHelper;
@@ -14,7 +13,7 @@ use yii\helpers\ArrayHelper;
  * @package app\widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
-class CountWidget extends BaseWidget
+class CountWidget extends BaseCricketWidget
 {
     /** @var Dashboard */
     public $dashboard;

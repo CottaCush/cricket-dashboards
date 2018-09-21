@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a76f78572931a2d6ad4f82a86507110",
+    "content-hash": "82cec8edac39b1f6a7e2ff65fbf1a7f2",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -367,6 +367,78 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16T21:13:23+00:00"
+        },
+        {
+            "name": "cottacush/cricket-base",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CottaCush/cricket-base.git",
+                "reference": "ca830c9602d990cff665a8411a9c0d549aa4b12d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/ca830c9602d990cff665a8411a9c0d549aa4b12d",
+                "reference": "ca830c9602d990cff665a8411a9c0d549aa4b12d",
+                "shasum": ""
+            },
+            "require": {
+                "cottacush/yii2-widgets": "^1.0",
+                "hashids/hashids": "^1.0",
+                "yii2tech/csv-grid": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CottaCush\\Cricket\\Report\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cotta & Cush Developers",
+                    "email": "developers@cottacush.com",
+                    "homepage": "http://cottacush.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Taiwo Ladipo",
+                    "email": "taiwo.ladipo@cottacush.com",
+                    "role": "Software Engineer"
+                },
+                {
+                    "name": "Olawale Lawal",
+                    "email": "wale@cottacush.com",
+                    "role": "Software Engineer"
+                }
+            ],
+            "description": "Cricket Base Module",
+            "homepage": "https://github.com/cottacush/cricket-base",
+            "keywords": [
+                "admin portal",
+                "basic",
+                "framework",
+                "report template",
+                "yii2"
+            ],
+            "time": "2018-09-21T11:52:04+00:00"
         },
         {
             "name": "cottacush/yii2-widgets",

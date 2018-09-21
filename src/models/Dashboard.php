@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Models;
+namespace CottaCush\Cricket\Dashboard\Models;
 
 /**
  * This is the model class for table "dashboards".

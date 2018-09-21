@@ -1,28 +1,12 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Interfaces;
+namespace CottaCush\Cricket\Dashboard\Interfaces;
 
 /**
- * Interface QueryInterface
+ * Interface WidgetInterface
  * @package CottaCush\Cricket\Report\Interfaces
  */
-interface QueryInterface
+interface WidgetInterface
 {
     public function getQuery();
-
-    /**
-     * @author Olawale Lawal <wale@cottacush.com>
-     * @return PlaceholderInterface[]
-     */
-    public function getPlaceholders();
-
-    public function getInputPlaceholders();
-
-    public function getSessionPlaceholders();
-
-    public function hasInputPlaceholders();
-
-    public function getPlaceholderQueries();
-
-    public function getDropdownPlaceholders();
 }

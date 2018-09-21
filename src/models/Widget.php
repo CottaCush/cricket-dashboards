@@ -1,8 +1,8 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Models;
+namespace CottaCush\Cricket\Dashboard\Models;
 
-use CottaCush\Cricket\Report\Interfaces\CricketQueryableInterface;
+use CottaCush\Cricket\Interfaces\CricketQueryableInterface;
 
 /**
  * This is the model class for table "widgets".
