@@ -1,7 +1,8 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Widgets;
+namespace CottaCush\Cricket\Widgets;
 
+use CottaCush\Cricket\Dashboard\Interfaces\WidgetInterface;
 use CottaCush\Cricket\Generators\SQLQueryBuilderParser;
 use CottaCush\Cricket\Dashboard\Models\Dashboard;
 use CottaCush\Yii2\Helpers\Html;
@@ -18,21 +19,12 @@ class DashboardViewWidget extends BaseCricketWidget
     /** @var Dashboard */
     public $dashboard;
 
-    const LOCATION_TOP = 'top';
-    const LOCATION_MIDDLE = 'middle';
-    const LOCATION_BOTTOM = 'bottom';
-
-    public static $sizes = [
-        self::LOCATION_TOP => 'col-lg-3 col-md-3 col-sm-6 col-xs-12',
-        self::LOCATION_MIDDLE => 'col-lg-4 col-sm-6 col-xs-12',
-        self::LOCATION_BOTTOM => 'col-sm-6 col-xs-12'
-    ];
     public $showTitle = false;
 
     /** @var Connection */
     private $dbConnection;
     private $parser;
-    private $locationWidgets;
+    private $locationalWidgets;
 
     private $widgets;
 
@@ -42,8 +34,8 @@ class DashboardViewWidget extends BaseCricketWidget
         $this->parser = new SQLQueryBuilderParser();
         $this->widgets = $this->dashboard->widgets;
 
-        $this->locationWidgets = ArrayHelper::index($this->dashboard->widgets, null, 'location');
-        arsort($this->locationWidgets);
+        $this->locationalWidgets = ArrayHelper::index($this->widgets, null, 'location');
+        arsort($this->locationalWidgets);
         parent::init();
     }
 
@@ -51,7 +43,7 @@ class DashboardViewWidget extends BaseCricketWidget
     {
         $this->renderTitle();
 
-        foreach ($this->locationWidgets as $location => $widgets) {
+        foreach ($this->locationalWidgets as $location => $widgets) {
             $this->renderLocation($location);
         }
     }
@@ -68,7 +60,7 @@ class DashboardViewWidget extends BaseCricketWidget
 
     private function renderLocation($location)
     {
-        $locationWidgets = ArrayHelper::getValue($this->locationWidgets, $location);
+        $locationWidgets = ArrayHelper::getValue($this->locationalWidgets, $location);
 
         echo Html::tag('h2', null);
         echo $this->beginDiv('row');
@@ -78,7 +70,7 @@ class DashboardViewWidget extends BaseCricketWidget
         echo $this->endDiv();
     }
 
-    private function renderWidget(Widget $widget)
+    private function renderWidget(WidgetInterface $widget)
     {
         $data = [];
 

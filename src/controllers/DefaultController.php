@@ -2,12 +2,11 @@
 
 namespace CottaCush\Cricket\Report\Controllers;
 
-use CottaCush\Cricket\Report\Constants\ErrorCodes;
-use CottaCush\Cricket\Report\Constants\Messages;
-use CottaCush\Cricket\Report\Exceptions\SQLReportGenerationException;
-use CottaCush\Cricket\Report\Generators\SQLQueryBuilderParser;
-use CottaCush\Cricket\Report\Libs\Utils;
-use CottaCush\Cricket\Report\Models\Report;
+use CottaCush\Cricket\Controllers\BaseCricketController;
+use CottaCush\Cricket\Constants\ErrorCodes;
+use CottaCush\Cricket\Constants\Messages;
+use CottaCush\Cricket\Generators\SQLQueryBuilderParser;
+use CottaCush\Cricket\Libs\Utils;
 use Exception;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -16,7 +15,7 @@ use yii\db\Expression;
 use yii\helpers\ArrayHelper;
 use yii2tech\csvgrid\CsvGrid;
 
-class DefaultController extends BaseReportsController
+class DefaultController extends BaseCricketController
 {
     const SQL_QUERY_KEY = '_sql_query_';
 
@@ -140,7 +139,7 @@ class DefaultController extends BaseReportsController
     private function renderException(Exception $exception)
     {
         $message = $exception->getMessage();
-        $title = 'Reports';
+        $title = 'Dashboard';
         $icon = 'exclamation-triangle';
 
         if ($exception->getCode() == ErrorCodes::MYSQL_NO_DATABASE) {

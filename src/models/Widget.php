@@ -3,6 +3,8 @@
 namespace CottaCush\Cricket\Dashboard\Models;
 
 use CottaCush\Cricket\Interfaces\CricketQueryableInterface;
+use CottaCush\Cricket\Models\BaseCricketModel;
+use CottaCush\Cricket\Models\Query;
 
 /**
  * This is the model class for table "widgets".

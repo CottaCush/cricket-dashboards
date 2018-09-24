@@ -2,8 +2,9 @@
 
 namespace CottaCush\Cricket\Report\Widgets;
 
-use CottaCush\Cricket\Report\Generators\SQLQueryBuilderParser;
-use CottaCush\Cricket\Report\Models\Dashboard;
+use CottaCush\Cricket\Dashboard\Models\Dashboard;
+use CottaCush\Cricket\Generators\SQLQueryBuilderParser;
+use CottaCush\Cricket\Widgets\BaseDashboardWidget;
 use CottaCush\Yii2\Helpers\Html;
 use yii\db\Connection;
 use yii\helpers\ArrayHelper;
@@ -13,72 +14,15 @@ use yii\helpers\ArrayHelper;
  * @package app\widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
-class CountWidget extends BaseCricketWidget
+class CountWidget extends BaseDashboardWidget
 {
     /** @var Dashboard */
     public $dashboard;
 
-    const LOCATION_TOP = 'top';
-    const LOCATION_MIDDLE = 'middle';
-    const LOCATION_BOTTOM = 'bottom';
-
-    public static $sizes = [
-        self::LOCATION_TOP => 'col-lg-3 col-md-3 col-sm-6 col-xs-12',
-        self::LOCATION_MIDDLE => 'col-lg-4 col-sm-6 col-xs-12',
-        self::LOCATION_BOTTOM => 'col-sm-6 col-xs-12'
-    ];
-    public $showTitle = false;
-
     /** @var Connection */
-    private $dbConnection;
     private $parser;
-    private $locationWidgets;
-
-    private $widgets;
-
-    public function init()
-    {
-        $this->dbConnection = $this->dashboard->project->getLocalDbConnection();
-        $this->parser = new SQLQueryBuilderParser();
-        $this->widgets = $this->dashboard->widgets;
-
-        $this->locationWidgets = ArrayHelper::index($this->dashboard->widgets, null, 'location');
-        arsort($this->locationWidgets);
-        parent::init();
-    }
 
     public function run()
-    {
-        $this->renderTitle();
-
-        foreach ($this->locationWidgets as $location => $widgets) {
-            $this->renderLocation($location);
-        }
-    }
-
-    private function renderTitle()
-    {
-        if (!$this->showTitle) {
-            return;
-        }
-        echo $this->beginDiv();
-        echo Html::tag('h2', $this->dashboard->name);
-        echo $this->endDiv();
-    }
-
-    private function renderLocation($location)
-    {
-        $locationWidgets = ArrayHelper::getValue($this->locationWidgets, $location);
-
-        echo Html::tag('h2', null);
-        echo $this->beginDiv('row');
-        foreach ($locationWidgets as $widget) {
-            $this->renderWidget($widget);
-        }
-        echo $this->endDiv();
-    }
-
-    private function renderWidget(Widget $widget)
     {
         $data = [];
 
@@ -100,5 +44,9 @@ class CountWidget extends BaseCricketWidget
         echo $this->endDiv();
         echo $this->endDiv();
         echo $this->endDiv();
+    }
+
+    public function getQuery()
+    {
     }
 }
