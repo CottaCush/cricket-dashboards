@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82cec8edac39b1f6a7e2ff65fbf1a7f2",
+    "content-hash": "a7fd72510a0ef3f93c327f3a0dba6b38",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -370,22 +370,21 @@
         },
         {
             "name": "cottacush/cricket-base",
-            "version": "v0.1",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CottaCush/cricket-base.git",
-                "reference": "ca830c9602d990cff665a8411a9c0d549aa4b12d"
+                "reference": "f9b5eca5e84ff844e14df6273f1459bfadfb8ab0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/ca830c9602d990cff665a8411a9c0d549aa4b12d",
-                "reference": "ca830c9602d990cff665a8411a9c0d549aa4b12d",
+                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/f9b5eca5e84ff844e14df6273f1459bfadfb8ab0",
+                "reference": "f9b5eca5e84ff844e14df6273f1459bfadfb8ab0",
                 "shasum": ""
             },
             "require": {
                 "cottacush/yii2-widgets": "^1.0",
-                "hashids/hashids": "^1.0",
-                "yii2tech/csv-grid": "^1.0"
+                "hashids/hashids": "^1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0||~5.0",
@@ -404,7 +403,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "CottaCush\\Cricket\\Report\\": "src"
+                    "CottaCush\\Cricket\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -438,7 +437,7 @@
                 "report template",
                 "yii2"
             ],
-            "time": "2018-09-21T11:52:04+00:00"
+            "time": "2018-09-25T10:58:56+00:00"
         },
         {
             "name": "cottacush/yii2-widgets",

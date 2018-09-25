@@ -1,12 +1,10 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Widgets;
+namespace CottaCush\Cricket\Dashboard\Widgets;
 
-use CottaCush\Cricket\Dashboard\Models\Dashboard;
-use CottaCush\Cricket\Generators\SQLQueryBuilderParser;
-use CottaCush\Cricket\Widgets\BaseDashboardWidget;
+use CottaCush\Cricket\Generators\SQL\SQLGenerator;
+use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
 use CottaCush\Yii2\Helpers\Html;
-use yii\db\Connection;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -16,20 +14,18 @@ use yii\helpers\ArrayHelper;
  */
 class CountWidget extends BaseDashboardWidget
 {
-    /** @var Dashboard */
-    public $dashboard;
-
-    /** @var Connection */
-    private $parser;
-
-    public function run()
+    /**
+     * @author Olawale Lawal <wale@cottacush.com>
+     * @throws \CottaCush\Cricket\Exceptions\SQLQueryGenerationException
+     */
+    public function renderWidget()
     {
+        $parser = new SQLQueryBuilderParser();
         $data = [];
-
-        $this->parser->parse($widget, $data, [], $this->dbConnection, 'queryOne');
+        $parser->parse($this->model, $data, $this->dbConnection, SQLGenerator::QUERY_ONE);
         $data = array_values($data);
 
-        echo $this->beginDiv(self::$sizes[$widget->location]);
+        echo $this->beginDiv(self::$sizes[$this->model->location]);
         echo $this->beginDiv(
             'panel panel-default',
             [
@@ -38,15 +34,12 @@ class CountWidget extends BaseDashboardWidget
         );
         echo $this->beginDiv('panel-body');
         echo $this->beginDiv('', ['style' => 'padding: 5px 0;']);
-        echo Html::tag('span', $widget->name, ['class' => 'h5 text-uppercase text-muted']) . '<br>';
+        echo Html::tag('span', $this->model->name, ['class' => 'h5 text-uppercase text-muted']);
+        echo Html::tag('br');
         echo Html::tag('span', ArrayHelper::getValue($data, '0', 0), ['class' => 'h2']);
         echo $this->endDiv();
         echo $this->endDiv();
         echo $this->endDiv();
         echo $this->endDiv();
-    }
-
-    public function getQuery()
-    {
     }
 }

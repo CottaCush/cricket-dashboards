@@ -1,23 +1,20 @@
 <?php
 
-namespace CottaCush\Cricket\Widgets;
+namespace CottaCush\Cricket\Dashboard\Widgets;
 
 use CottaCush\Cricket\Dashboard\Models\Widget;
-use CottaCush\Cricket\Generators\SQLQueryBuilderParser;
 use CottaCush\Yii2\Widgets\BaseWidget as Yii2BaseWidget;
+use yii\helpers\ArrayHelper;
 
 /**
  * Class BaseDashboardWidget
  * @package CottaCush\Cricket\Widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
-class BaseDashboardWidget extends Yii2BaseWidget
+abstract class BaseDashboardWidget extends Yii2BaseWidget
 {
     /** @var Widget */
     public $model;
-
-    /** @var SQLQueryBuilderParser */
-    public $parser;
 
     const LOCATION_TOP = 'top';
     const LOCATION_MIDDLE = 'middle';
@@ -29,7 +26,16 @@ class BaseDashboardWidget extends Yii2BaseWidget
         self::LOCATION_BOTTOM => 'col-sm-6 col-xs-12'
     ];
 
+    public $dbConnection;
+
     protected function getData()
     {
+    }
+
+    abstract public function renderWidget();
+
+    protected function getSize()
+    {
+        return ArrayHelper::getValue(self::$sizes, $this->model->location);
     }
 }

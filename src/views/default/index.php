@@ -1,14 +1,13 @@
 <?php
 
-use CottaCush\Cricket\Report\Models\Report;
+use CottaCush\Cricket\Dashboard\Models\Dashboard;
 use CottaCush\Yii2\Widgets\ActionButtons;
 use CottaCush\Yii2\Widgets\EmptyStateWidget;
 use CottaCush\Yii2\Widgets\GridViewWidget;
 use yii\helpers\Url;
 
-$this->title = ' Reports';
+$this->title = 'Dashboards';
 $this->params['breadcrumbs'] = [
-    ['label' => 'Reports', 'url' => Url::toRoute('/reports/default/')],
     $this->title
 ];
 
@@ -32,7 +31,7 @@ else :
                 'header' => 'ACTION',
                 'template' => '{actions}',
                 'buttons' => [
-                    'actions' => function ($url, Report $model, $key) {
+                    'actions' => function ($url, Dashboard $model, $key) {
                         $actions = [
                             [
                                 'label' => 'View',
