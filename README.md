@@ -60,10 +60,10 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/cottacush/cricket-dashboards.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/cottacush/cricket-dashboards.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/cottacush/cricket-dashboardsd
-[link-travis]: https://travis-ci.org/cottacush/cricket-dashboardsd
-[link-scrutinizer]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboardsd/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboardsd
-[link-downloads]: https://packagist.org/packages/cottacush/cricket-dashboardsd
+[link-packagist]: https://packagist.org/packages/cottacush/cricket-dashboards
+[link-travis]: https://travis-ci.org/cottacush/cricket-dashboards
+[link-scrutinizer]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboards/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboards
+[link-downloads]: https://packagist.org/packages/cottacush/cricket-dashboards
 [link-contributors]: ../../contributors
 [link-fxp-composer-asset-plugin]: https://packagist.org/packages/fxp/composer-asset-plugin
