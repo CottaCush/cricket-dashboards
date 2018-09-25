@@ -2,6 +2,8 @@
 
 namespace CottaCush\Cricket\Dashboard\Models;
 
+use CottaCush\Cricket\Models\BaseCricketModel;
+
 /**
  * This is the model class for table "dashboards".
  *
@@ -16,9 +18,6 @@ namespace CottaCush\Cricket\Dashboard\Models;
  * @property string $last_updated_at
  * @property int $last_updated_by
  *
- * @property CricketUser $createdBy
- * @property CricketUser $lastUpdatedBy
- * @property Project $project
  * @property Widget[] $widgets
  */
 class Dashboard extends BaseCricketModel
@@ -66,10 +65,24 @@ class Dashboard extends BaseCricketModel
         return $this->hasMany(Widget::class, ['dashboard_id' => 'id'])->orderBy(['location' => 'ASC']);
     }
 
+    /**
+     * @author Olawale Lawal <wale@cottacush.com>
+     * @param $id
+     * @return array|Dashboard|null|\yii\db\ActiveRecord
+     */
     public static function getOne($id)
     {
         return self::find()->where([self::tableName() . '.id' => $id])
-            ->joinWith(['project', 'widgets.queryObj.placeholders'])
+            ->joinWith(['widgets.queryObj.placeholders'])
             ->one();
+    }
+
+    /**
+     * @author Olawale Lawal <wale@cottacush.com>
+     * @return \yii\db\ActiveQuery
+     */
+    public static function getDashboards()
+    {
+        return self::find();
     }
 }

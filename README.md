@@ -1,4 +1,4 @@
-# Cricket Reports
+# Cricket Dashboards
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Reports module created by the Cotta & Cush development team
+Dashboard module created by the Cotta & Cush development team
 
 ## Dependency
 
@@ -22,7 +22,7 @@ $ composer global require "fxp/composer-asset-plugin:~1.3"
 Via Composer
 
 ``` bash
-$ composer require cottacush/cricket-reports
+$ composer require cottacush/cricket-dashboards
 ```
 
 ## Change log
@@ -53,17 +53,17 @@ If you discover any security related issues, please email <developers@cottacush.
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/cottacush/cricket-reports.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/cottacush/cricket-dashboards.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/cottacush/cricket-reports/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/cottacush/cricket-reports.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/cottacush/cricket-reports.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/cottacush/cricket-reports.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/cottacush/cricket-dashboards/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/cottacush/cricket-dashboards.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/cottacush/cricket-dashboards.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/cottacush/cricket-dashboards.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/cottacush/cricket-reports
-[link-travis]: https://travis-ci.org/cottacush/cricket-reports
-[link-scrutinizer]: https://scrutinizer-ci.com/g/cottacush/cricket-reports/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/cottacush/cricket-reports
-[link-downloads]: https://packagist.org/packages/cottacush/cricket-reports
+[link-packagist]: https://packagist.org/packages/cottacush/cricket-dashboardsd
+[link-travis]: https://travis-ci.org/cottacush/cricket-dashboardsd
+[link-scrutinizer]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboardsd/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/cottacush/cricket-dashboardsd
+[link-downloads]: https://packagist.org/packages/cottacush/cricket-dashboardsd
 [link-contributors]: ../../contributors
 [link-fxp-composer-asset-plugin]: https://packagist.org/packages/fxp/composer-asset-plugin

@@ -1,37 +1,12 @@
 <?php
 
-use CottaCush\Cricket\Report\Widgets\ReportTableWidget;
-use CottaCush\Cricket\Report\Widgets\SQLReportFilterWidget;
-use CottaCush\Yii2\Helpers\Html;
+use CottaCush\Cricket\Dashboard\Widgets\DashboardViewWidget;
 use yii\helpers\ArrayHelper;
 
-$this->title = ArrayHelper::getValue($report, 'name');
+$this->title = ArrayHelper::getValue($dashboard, 'name');
 
 $this->params['breadcrumbs'] = [
-    $report->name,
+    $dashboard->name,
 ];
 
-$excludeBootstrapAssets = isset($excludeBootstrapAssets);
-
-$title = $this->title . ' ' .
-    Html::tag(
-        'span',
-        null,
-        [
-            'class' => 'fa fa-question-circle', 'data-toggle' => 'tooltip', 'data-placement' => 'right',
-            'title' => ArrayHelper::getValue($report, 'description')
-        ]
-    );
-
-echo Html::beginTag('div', ['class' => 'reports-wrapper']);
-if ($hasPlaceholders && !$hasPlaceholdersReplaced) {
-    echo SQLReportFilterWidget::widget([
-        'report' => $report,'excludeBootstrapAssets' => $excludeBootstrapAssets
-    ]);
-} else {
-    echo ReportTableWidget::widget([
-        'data' => $data, 'report' => $report, 'hasPlaceholders' => $hasPlaceholders, 'placeholderValues' => $values,
-        'excludeBootstrapAssets' => $excludeBootstrapAssets
-    ]);
-}
-echo Html::endTag('div');
+echo DashboardViewWidget::widget(['dashboard' => $dashboard]);
