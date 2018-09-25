@@ -28,10 +28,6 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
 
     public $dbConnection;
 
-    protected function getData()
-    {
-    }
-
     abstract public function renderWidget();
 
     protected function getSize()

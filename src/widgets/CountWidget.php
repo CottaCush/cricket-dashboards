@@ -16,7 +16,6 @@ class CountWidget extends BaseDashboardWidget
 {
     /**
      * @author Olawale Lawal <wale@cottacush.com>
-     * @throws \CottaCush\Cricket\Exceptions\SQLQueryGenerationException
      */
     public function renderWidget()
     {
