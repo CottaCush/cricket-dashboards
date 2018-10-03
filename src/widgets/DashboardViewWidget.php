@@ -5,6 +5,7 @@ namespace CottaCush\Cricket\Dashboard\Widgets;
 use CottaCush\Cricket\Dashboard\Factories\DashboardWidgetFactory;
 use CottaCush\Cricket\Dashboard\Models\Dashboard;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
+use CottaCush\Cricket\Report\Assets\DashboardViewAsset;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
 use yii\db\Connection;
@@ -42,6 +43,7 @@ class DashboardViewWidget extends BaseCricketWidget
         $this->locationalWidgets = ArrayHelper::index($this->widgets, null, 'location');
         $this->factory = new DashboardWidgetFactory($this->dbConnection);
         arsort($this->locationalWidgets);
+        DashboardViewAsset::register($this->view);
         parent::init();
     }
 
@@ -69,10 +71,12 @@ class DashboardViewWidget extends BaseCricketWidget
         $locationWidgets = ArrayHelper::getValue($this->locationalWidgets, $location);
 
         echo Html::tag('h2', null);
+        echo $this->beginDiv('container dashboard-view');
         echo $this->beginDiv('row');
         foreach ($locationWidgets as $widget) {
             $this->factory->createWidget($widget)->renderWidget();
         }
+        echo $this->endDiv();
         echo $this->endDiv();
     }
 }
