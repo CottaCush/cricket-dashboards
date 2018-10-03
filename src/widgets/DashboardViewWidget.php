@@ -41,17 +41,20 @@ class DashboardViewWidget extends BaseCricketWidget
 
         $this->locationalWidgets = ArrayHelper::index($this->widgets, null, 'location');
         $this->factory = new DashboardWidgetFactory($this->dbConnection);
-        arsort($this->locationalWidgets);
+        krsort($this->locationalWidgets);
+
         parent::init();
     }
 
     public function run()
     {
+        echo $this->beginDiv('cricket-wrapper');
         $this->renderTitle();
 
         foreach ($this->locationalWidgets as $location => $widgets) {
             $this->renderLocation($location);
         }
+        echo $this->endDiv();
     }
 
     private function renderTitle()
@@ -68,10 +71,10 @@ class DashboardViewWidget extends BaseCricketWidget
     {
         $locationWidgets = ArrayHelper::getValue($this->locationalWidgets, $location);
 
-        echo Html::tag('h2', null);
-        echo $this->beginDiv('row');
+        echo $this->beginDiv('form-row');
         foreach ($locationWidgets as $widget) {
-            $this->factory->createWidget($widget)->renderWidget();
+            $dashboardWidget = $this->factory->createWidget($widget);
+            $dashboardWidget->renderWidget();
         }
         echo $this->endDiv();
     }

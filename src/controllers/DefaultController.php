@@ -10,8 +10,6 @@ use yii\data\ActiveDataProvider;
 
 class DefaultController extends BaseCricketController
 {
-    const SQL_QUERY_KEY = '_sql_query_';
-
     /**
      * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
      * @return string

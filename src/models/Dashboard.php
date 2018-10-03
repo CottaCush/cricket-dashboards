@@ -73,7 +73,11 @@ class Dashboard extends BaseCricketModel
     public static function getOne($id)
     {
         return self::find()->where([self::tableName() . '.id' => $id])
-            ->joinWith(['widgets.queryObj.placeholders'])
+            ->with([
+                'widgets.queryObj.placeholders',
+                'widgets.queryObj.inputPlaceholders',
+                'widgets.queryObj.sessionPlaceholders'
+            ])
             ->one();
     }
 

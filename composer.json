@@ -17,7 +17,7 @@
       "hashids/hashids": "^1.0",
       "yii2tech/csv-grid": "^1.0",
       "kartik-v/yii2-widget-select2": "v2.1.1",
-        "cottacush/cricket-base": "^0.3.0"
+      "cottacush/cricket-base": "@dev"
     },
     "authors": [
       {
@@ -42,6 +42,12 @@
       "scrutinizer/ocular": "~1.1",
       "squizlabs/php_codesniffer": "~2.3"
     },
+    "repositories":[
+      {
+        "type": "path",
+        "url": "../cricket-base"
+      }
+    ],
     "autoload": {
       "psr-4": {
         "CottaCush\\Cricket\\Dashboard\\": "src"
