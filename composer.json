@@ -5,7 +5,7 @@
       "yii2",
       "framework",
       "basic",
-      "report template",
+      "dashboard template",
       "admin portal"
     ],
     "homepage": "https://github.com/cottacush/cricket-dashboards",
@@ -13,11 +13,10 @@
     "license": "MIT",
     "minimum-stability": "stable",
     "require": {
-      "cottacush/yii2-widgets": "^1.0",
       "hashids/hashids": "^1.0",
       "yii2tech/csv-grid": "^1.0",
       "kartik-v/yii2-widget-select2": "v2.1.1",
-        "cottacush/cricket-base": "^0.3.0"
+      "cottacush/cricket-base": "^0.5.0"
     },
     "authors": [
       {
