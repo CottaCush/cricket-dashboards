@@ -6,7 +6,7 @@ use CottaCush\Cricket\Constants\Messages;
 use CottaCush\Cricket\Controllers\BaseCricketController;
 use CottaCush\Cricket\Dashboard\Models\Dashboard;
 use CottaCush\Cricket\Libs\Utils;
-use yii\data\ActiveDataProvider;
+use yii\helpers\ArrayHelper;
 
 class DefaultController extends BaseCricketController
 {
@@ -16,18 +16,15 @@ class DefaultController extends BaseCricketController
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Dashboard::getDashboards(),
-            'sort' => [
-                'defaultOrder' => ['name' => SORT_DESC],
-                'attributes' => ['name', 'description']
-            ],
-            'pagination' => [
-                'defaultPageSize' => 20
-            ],
-        ]);
+        $dashboards = Dashboard::getDashboards()->asArray()->all();
+        $count = count($dashboards);
 
-        return $this->render('index', ['reports' => $dataProvider]);
+        if ($count == 1) {
+            $dashboard = ArrayHelper::getValue($dashboards, 0);
+            return $this->redirect(['view', 'id' => Utils::encodeId(ArrayHelper::getValue($dashboard, 'id'))]);
+        }
+
+        return $this->render('index', ['dashboards' => $dashboards, 'count' => $count]);
     }
 
     /**

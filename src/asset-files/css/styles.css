@@ -1,0 +1,31 @@
+.cricket-wrapper .dashboard-list__item {
+  height: 300px;
+  padding: 30px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
+          box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
+  background: #fff;
+  text-align: center;
+}
+.cricket-wrapper .dashboard-list__item-link {
+  text-decoration: none;
+  font-size: 24px;
+}
+.cricket-wrapper .dashboard-view__count-widget {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
+          box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
+  background: #fff;
+}
+.cricket-wrapper .dashboard-view__count-widget--data {
+  padding: 5px 0;
+}
+.cricket-wrapper .dashboard-view__count-widget--data-label {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.cricket-wrapper .dashboard-view__count-widget--data-value {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=maps/styles.css.map */

@@ -25,9 +25,19 @@ class CountWidget extends BaseDashboardWidget
     {
         echo $this->beginDiv('card-body p-0');
 
-        echo $this->beginDiv('p-3');
-        echo Html::tag('h5', $this->model->name, ['class' => 'text-uppercase text-muted m-0 pt-1 pb-2']);
-        echo Html::tag('span', $this->getData(), ['class' => 'h2']);
+        echo $this->beginDiv(self::$sizes[$this->model->location]);
+        echo $this->beginDiv('panel panel-default dashboard-view__count-widget');
+        echo $this->beginDiv('panel-body');
+        echo $this->beginDiv('dashboard-view__count-widget--data');
+        echo Html::tag('span', $this->model->name, ['class' => 'dashboard-view__count-widget--data-label']);
+        echo Html::tag('br');
+        echo Html::tag(
+            'span',
+            ArrayHelper::getValue($data, '0', 0),
+            ['class' => 'dashboard-view__count-widget--data-value']
+        );
+        echo $this->endDiv();
+        echo $this->endDiv();
         echo $this->endDiv();
 
         echo $this->endDiv();

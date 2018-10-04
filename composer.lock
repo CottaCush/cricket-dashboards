@@ -435,7 +435,8 @@
                 "framework",
                 "report template",
                 "yii2"
-            ]
+            ],
+            "time": "2018-09-27T15:07:29+00:00"
         },
         {
             "name": "cottacush/yii2-widgets",
