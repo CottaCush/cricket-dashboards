@@ -38,12 +38,6 @@
       "scrutinizer/ocular": "~1.1",
       "squizlabs/php_codesniffer": "~2.3"
     },
-    "repositories":[
-      {
-        "type": "path",
-        "url": "../cricket-base"
-      }
-    ],
     "autoload": {
       "psr-4": {
         "CottaCush\\Cricket\\Dashboards\\": "src"
