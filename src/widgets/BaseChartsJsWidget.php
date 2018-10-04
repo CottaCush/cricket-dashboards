@@ -1,8 +1,8 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
-use CottaCush\Cricket\Dashboard\Assets\ChartJSAsset;
+use CottaCush\Cricket\Dashboards\Assets\ChartJSAsset;
 use CottaCush\Yii2\Helpers\Html;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;

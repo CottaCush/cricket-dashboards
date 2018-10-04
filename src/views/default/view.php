@@ -1,6 +1,6 @@
 <?php
 
-use CottaCush\Cricket\Dashboard\Widgets\DashboardViewWidget;
+use CottaCush\Cricket\Dashboards\Widgets\DashboardViewWidget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
 /**
  * Class ScatterPlotWidget
- * @package CottaCush\Cricket\Dashboard\Widgets
+ * @package CottaCush\Cricket\Dashboards\Widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
 class ScatterPlotWidget extends BaseChartsJsWidget

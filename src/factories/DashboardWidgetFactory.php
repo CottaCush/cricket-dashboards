@@ -1,15 +1,15 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Factories;
+namespace CottaCush\Cricket\Dashboards\Factories;
 
-use CottaCush\Cricket\Dashboard\Widgets\BarChartWidget;
-use CottaCush\Cricket\Dashboard\Widgets\BaseDashboardWidget;
-use CottaCush\Cricket\Dashboard\Widgets\CountWidget;
-use CottaCush\Cricket\Dashboard\Widgets\DoughnutWidget;
-use CottaCush\Cricket\Dashboard\Widgets\LineChartWidget;
-use CottaCush\Cricket\Dashboard\Widgets\PieChartWidget;
-use CottaCush\Cricket\Dashboard\Widgets\ScatterPlotWidget;
-use CottaCush\Cricket\Dashboard\Widgets\TableWidget;
+use CottaCush\Cricket\Dashboards\Widgets\BarChartWidget;
+use CottaCush\Cricket\Dashboards\Widgets\BaseDashboardWidget;
+use CottaCush\Cricket\Dashboards\Widgets\CountWidget;
+use CottaCush\Cricket\Dashboards\Widgets\DoughnutWidget;
+use CottaCush\Cricket\Dashboards\Widgets\LineChartWidget;
+use CottaCush\Cricket\Dashboards\Widgets\PieChartWidget;
+use CottaCush\Cricket\Dashboards\Widgets\ScatterPlotWidget;
+use CottaCush\Cricket\Dashboards\Widgets\TableWidget;
 use CottaCush\Cricket\Interfaces\CricketQueryableInterface;
 use yii\db\Connection;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
-use CottaCush\Cricket\Dashboard\Models\Widget;
+use CottaCush\Cricket\Dashboards\Models\Widget;
 use CottaCush\Cricket\Generators\SQL\SQLGenerator;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
 use CottaCush\Yii2\Helpers\Html;
@@ -82,7 +82,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     protected function renderHeader()
     {
         echo $this->beginDiv('card-header border-bottom');
-        echo Html::tag('span', $this->model->name . ' - ' . $this->model->type, ['class' => 'h4 p-1']);
+        echo Html::tag('span', $this->model->name, ['class' => 'h4 p-1']);
         echo $this->endDiv();
     }
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Controllers;
+namespace CottaCush\Cricket\Dashboards\Controllers;
 
 use CottaCush\Cricket\Constants\Messages;
 use CottaCush\Cricket\Controllers\BaseCricketController;
-use CottaCush\Cricket\Dashboard\Models\Dashboard;
+use CottaCush\Cricket\Dashboards\Models\Dashboard;
 use CottaCush\Cricket\Libs\Utils;
 use yii\helpers\ArrayHelper;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
 use yii\helpers\ArrayHelper;
 
 /**
  * Class BarChartWidget
- * @package CottaCush\Cricket\Dashboard\Widgets
+ * @package CottaCush\Cricket\Dashboards\Widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
 class BarChartWidget extends BaseChartsJsWidget

@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Models;
+namespace CottaCush\Cricket\Dashboards\Models;
 
 use CottaCush\Cricket\Interfaces\CricketQueryableInterface;
 use CottaCush\Cricket\Models\BaseCricketModel;

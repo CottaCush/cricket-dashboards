@@ -1,12 +1,12 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
 use CottaCush\Yii2\Helpers\Html;
 
 /**
  * Class TableWidget
- * @package CottaCush\Cricket\Dashboard\Widgets
+ * @package CottaCush\Cricket\Dashboards\Widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
 class TableWidget extends BaseDashboardWidget

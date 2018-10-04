@@ -1,0 +1,74 @@
+@background_color_1: #fff;
+
+.cricket-wrapper {
+  .card {
+    box-shadow: 0 2px 0 rgba(90, 97, 105, .07),
+                0 4px 8px rgba(90, 97, 105, .08),
+                0 10px 10px rgba(90, 97, 105, .03),
+                0 7px 70px rgba(90, 97, 105, .08);
+    .card-text {
+      margin-bottom: 1.5625rem;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .card-small {
+    box-shadow: 0 2px 0 rgba(90, 97, 105, .11),
+                0 4px 8px rgba(90, 97, 105, .12),
+                0 10px 10px rgba(90, 97, 105, .06),
+                0 7px 70px rgba(90, 97, 105, .1);
+    .card-body {
+      padding: 1rem 1.5rem;
+    }
+    .card-footer {
+      padding: 1rem 1.5rem;
+    }
+    .card-header {
+      padding: 1rem 1.5rem;
+    }
+  }
+  .card-body {
+    > p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .card-title {
+    font-weight: 500;
+    margin-bottom: .75rem;
+  }
+  .card-subtitle {
+    margin-top: -1.09375rem;
+  }
+  .card-link {
+    & + .card-link {
+      margin-left: 1.875rem;
+    }
+  }
+  .card-header {
+    padding: 1.09375rem 1.875rem;
+    background-color: @background_color_1;
+    border-bottom: none;
+    text-align: left;
+    font-weight: 500;
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+  .card-footer {
+    padding: 1.09375rem 1.875rem;
+    background-color: @background_color_1;
+    border-top: none;
+    &:last-child {
+      border-radius: 0 0 .625rem .625rem;
+    }
+  }
+  .form-control {
+    height: auto;
+    font-size: 1em;
+  }
+}

@@ -1,15 +1,13 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Assets;
-
-use CottaCush\Cricket\Assets\BaseCricketAsset;
+namespace CottaCush\Cricket\Dashboards\Assets;
 
 /**
  * Class ChartJSAsset
- * @package CottaCush\Cricket\Dashboard\Assets
+ * @package CottaCush\Cricket\Dashboards\Assets
  * @author Olawale Lawal <wale@cottacush.com>
  */
-class ChartJSAsset extends BaseCricketAsset
+class ChartJSAsset extends BaseDashboardsAsset
 {
     /**
      * Set the sourcePath as self::ASSETS_PATH by default.
@@ -18,12 +16,12 @@ class ChartJSAsset extends BaseCricketAsset
     public $sourcePath = __DIR__ . '/../asset-files/plugins/chartsjs/';
 
     public $js = [
-        'Chart.bundle.min.js',
+        'Chart.bundle.js',
         'charts_defaults.js'
     ];
     public $css = [
         'custom-bootstrap.css',
-        'dashboard_styles.css'
+        'css/styles.css'
     ];
 
     public $productionJs = [
@@ -31,6 +29,6 @@ class ChartJSAsset extends BaseCricketAsset
     ];
 
     public $depends = [
-        'CottaCush\Cricket\Assets\BaseCricketAsset',
+        'CottaCush\Cricket\Assets\CricketAsset',
     ];
 }
