@@ -19,10 +19,6 @@ class ChartJSAsset extends BaseDashboardsAsset
         'Chart.bundle.js',
         'charts_defaults.js'
     ];
-    public $css = [
-        'custom-bootstrap.css',
-        'css/styles.css'
-    ];
 
     public $productionJs = [
         'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js',
