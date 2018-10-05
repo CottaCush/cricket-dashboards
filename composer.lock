@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a0c9be5bc30089519f8b7cdea5ee2b8",
+    "content-hash": "d1da9a4a0251111b717d3d8600648341",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -370,16 +370,16 @@
         },
         {
             "name": "cottacush/cricket-base",
-            "version": "v0.6",
+            "version": "v0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CottaCush/cricket-base.git",
-                "reference": "4335199ed5b871816e56a610002d54cae1c5345e"
+                "reference": "6cbda9600efbd4e8cdfaa9b38102d8015c76290c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/4335199ed5b871816e56a610002d54cae1c5345e",
-                "reference": "4335199ed5b871816e56a610002d54cae1c5345e",
+                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/6cbda9600efbd4e8cdfaa9b38102d8015c76290c",
+                "reference": "6cbda9600efbd4e8cdfaa9b38102d8015c76290c",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "report template",
                 "yii2"
             ],
-            "time": "2018-10-04T13:14:19+00:00"
+            "time": "2018-10-05T14:40:51+00:00"
         },
         {
             "name": "cottacush/yii2-widgets",
