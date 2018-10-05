@@ -72,7 +72,7 @@ class DashboardViewWidget extends BaseCricketWidget
 
     private function renderDashboard()
     {
-        echo $this->beginDiv('dashboard-view');
+        echo $this->beginDiv('cricket-dashboard-view');
         foreach ($this->locationalWidgets as $location => $widgets) {
             $this->renderLocation($location);
         }
