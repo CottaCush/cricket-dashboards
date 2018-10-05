@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Assets;
+namespace CottaCush\Cricket\Dashboards\Assets;
 
 /**
  * Class DashboardListAsset
@@ -10,6 +10,6 @@ namespace CottaCush\Cricket\Dashboard\Assets;
 class DashboardViewAsset extends BaseDashboardsAsset
 {
     public $depends = [
-        'CottaCush\Cricket\Report\Assets\DashboardsAsset'
+        'CottaCush\Cricket\Dashboards\Assets\DashboardsAsset'
     ];
 }

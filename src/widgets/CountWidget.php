@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
 use CottaCush\Cricket\Generators\SQL\SQLGenerator;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
@@ -14,15 +14,27 @@ use yii\helpers\ArrayHelper;
  */
 class CountWidget extends BaseDashboardWidget
 {
+    protected $queryFunction = SQLGenerator::QUERY_SCALAR;
+
     /**
      * @author Olawale Lawal <wale@cottacush.com>
-     * @throws \CottaCush\Cricket\Exceptions\SQLQueryGenerationException
      */
-    public function renderWidget()
+    protected function renderHeader()
     {
-        $parser = new SQLQueryBuilderParser();
-        $data = $parser->parse($this->model, [], $this->dbConnection, SQLGenerator::QUERY_ONE);
-        $data = array_values($data);
+        return;
+    }
+
+    protected function renderBody()
+    {
+        echo $this->beginDiv('card-body cricket-dashboard-view__count-widget');
+
+        echo $this->beginDiv('cricket-dashboard-view__count-widget--data');
+        echo Html::tag('span', $this->model->name, ['class' => 'cricket-dashboard-view__count-widget--data-label']);
+        echo Html::tag('br');
+        echo Html::tag('span', $this->getData(), ['class' => 'cricket-dashboard-view__count-widget--data-value']);
+        echo $this->endDiv();
+
+        echo $this->endDiv();
 
         echo $this->beginDiv(self::$sizes[$this->model->location]);
         echo $this->beginDiv('panel panel-default dashboard-view__count-widget equal-height');

@@ -1,9 +1,9 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
-use CottaCush\Cricket\Dashboard\Assets\DashboardListAsset;
-use CottaCush\Cricket\Report\Libs\Utils;
+use CottaCush\Cricket\Dashboards\Assets\DashboardListAsset;
+use CottaCush\Cricket\Libs\Utils;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
 use yii\helpers\ArrayHelper;
@@ -12,7 +12,7 @@ use yii\helpers\Url;
 /**
  * Class DashboardListWidget
  * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
- * @package CottaCush\Cricket\Dashboard\Widgets
+ * @package CottaCush\Cricket\Dashboards\Widgets
  */
 class DashboardListWidget extends BaseCricketWidget
 {

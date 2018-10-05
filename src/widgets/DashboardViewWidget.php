@@ -1,11 +1,11 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Widgets;
+namespace CottaCush\Cricket\Dashboards\Widgets;
 
-use CottaCush\Cricket\Dashboard\Factories\DashboardWidgetFactory;
-use CottaCush\Cricket\Dashboard\Models\Dashboard;
+use CottaCush\Cricket\Dashboards\Assets\DashboardViewAsset;
+use CottaCush\Cricket\Dashboards\Factories\DashboardWidgetFactory;
+use CottaCush\Cricket\Dashboards\Models\Dashboard;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
-use CottaCush\Cricket\Dashboard\Assets\DashboardViewAsset;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
 use CottaCush\Yii2\Widgets\EmptyStateWidget;
@@ -14,7 +14,7 @@ use yii\helpers\ArrayHelper;
 
 /**
  * Class DashboardViewWidget
- * @package app\widgets
+ * @package CottaCush\Cricket\Dashboards\Widgets
  * @author Olawale Lawal <wale@cottacush.com>
  */
 class DashboardViewWidget extends BaseCricketWidget
@@ -43,8 +43,9 @@ class DashboardViewWidget extends BaseCricketWidget
 
         $this->locationalWidgets = ArrayHelper::index($this->widgets, null, 'location');
         $this->factory = new DashboardWidgetFactory($this->dbConnection);
-        arsort($this->locationalWidgets);
         DashboardViewAsset::register($this->view);
+        krsort($this->locationalWidgets);
+
         parent::init();
     }
 
@@ -63,6 +64,7 @@ class DashboardViewWidget extends BaseCricketWidget
         if (!$this->showTitle) {
             return;
         }
+
         echo $this->beginDiv();
         echo Html::tag('h2', $this->dashboard->name);
         echo $this->endDiv();
@@ -91,7 +93,8 @@ class DashboardViewWidget extends BaseCricketWidget
 
         echo $this->beginDiv('row');
         foreach ($locationWidgets as $widget) {
-            $this->factory->createWidget($widget)->renderWidget();
+            $dashboardWidget = $this->factory->createWidget($widget);
+            $dashboardWidget->renderWidget();
         }
         echo $this->endDiv();
     }

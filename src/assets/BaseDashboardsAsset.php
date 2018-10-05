@@ -1,16 +1,16 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Assets;
+namespace CottaCush\Cricket\Dashboards\Assets;
 
-use CottaCush\Yii2\Assets\AssetBundle;
+use CottaCush\Cricket\Assets\BaseCricketAsset;
 
 /**
- * Class BaseAsset
+ * Class BaseDashboardsAsset
+ * @package CottaCush\Cricket\Dashboards\Assets
  * Extend the CottaCush AssetBundle and set $basePath / $baseUrl properties
  * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
- * @package app\assets
  */
-class BaseDashboardsAsset extends AssetBundle
+class BaseDashboardsAsset extends BaseCricketAsset
 {
     /**
      * The main public assets directory.

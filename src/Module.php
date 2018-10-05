@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard;
+namespace CottaCush\Cricket\Dashboards;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -9,12 +9,12 @@ use yii\db\Connection;
 
 /**
  * Class Module
- * @package CottaCush\Cricket\Report
+ * @package CottaCush\Cricket\Dashboards
  * @author Olawale Lawal <wale@cottacush.com>
  */
 class Module extends BaseModule
 {
-    public $controllerNamespace = 'CottaCush\Cricket\Dashboard\Controllers';
+    public $controllerNamespace = 'CottaCush\Cricket\Dashboards\Controllers';
     public $layout = 'main';
 
     public $permissionValues;

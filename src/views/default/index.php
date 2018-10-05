@@ -1,6 +1,6 @@
 <?php
 
-use CottaCush\Cricket\Dashboard\Widgets\DashboardListWidget;
+use CottaCush\Cricket\Dashboards\Widgets\DashboardListWidget;
 use CottaCush\Yii2\Widgets\EmptyStateWidget;
 use yii\helpers\Html;
 
