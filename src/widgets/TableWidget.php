@@ -16,9 +16,9 @@ class TableWidget extends BaseDashboardWidget
 
     protected function renderBody()
     {
-        echo $this->beginDiv('card-body p-0');
+        echo $this->beginDiv('card-body');
 
-        echo $this->beginDiv('px-4');
+        echo $this->beginDiv('');
         $this->renderFilter();
         echo $this->endDiv();
 
@@ -28,7 +28,7 @@ class TableWidget extends BaseDashboardWidget
 
     private function renderTable()
     {
-        echo Html::beginTag('table', ['class' => 'table m-0 table-bordered border-0']);
+        echo Html::beginTag('table', ['class' => 'table table-bordered']);
         $this->renderTableHeader();
         $this->renderTableBody();
         echo Html::endTag('table');
@@ -38,7 +38,7 @@ class TableWidget extends BaseDashboardWidget
     {
         $columnHeaders = $this->getDataColumns($this->data);
 
-        echo Html::beginTag('thead', ['class' => 'bg-light text-center']);
+        echo Html::beginTag('thead', ['class' => 'text-center']);
         echo Html::beginTag('tr');
 
         if ($this->includeSerialCount) {
@@ -49,7 +49,7 @@ class TableWidget extends BaseDashboardWidget
             echo Html::tag(
                 'th',
                 strtoupper(str_replace('_', ' ', $columnHeader)),
-                ['scope' => 'col', 'class' => 'border-0']
+                ['scope' => 'col', 'class' => '']
             );
         }
         echo Html::endTag('tr');

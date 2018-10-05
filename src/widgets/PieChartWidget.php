@@ -11,8 +11,6 @@ use yii\helpers\ArrayHelper;
  */
 class PieChartWidget extends BaseChartsJsWidget
 {
-    public $type = 'pie';
-
     public function init()
     {
         parent::init();

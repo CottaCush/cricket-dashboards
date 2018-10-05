@@ -23,6 +23,15 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     const LOCATION_MIDDLE = 'middle';
     const LOCATION_BOTTOM = 'bottom';
 
+    const TYPE_AREA_GRAPH = 'area-graph';
+    const TYPE_BAR_CHART = 'bar-chart';
+    const TYPE_COUNT = 'count';
+    const TYPE_DOUGHNUT = 'doughnut';
+    const TYPE_LINE_CHART = 'line-chart';
+    const TYPE_PIE_CHART = 'pie-chart';
+    const TYPE_SCATTER_PLOT = 'scatter-plot';
+    const TYPE_TABLE = 'table';
+
     protected $data;
     protected $columns;
 
@@ -82,7 +91,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     protected function renderHeader()
     {
         echo $this->beginDiv('card-header border-bottom');
-        echo Html::tag('span', $this->model->name, ['class' => 'h4 p-1']);
+        echo Html::tag('span', $this->model->name, ['class' => 'h4']);
         echo $this->endDiv();
     }
 

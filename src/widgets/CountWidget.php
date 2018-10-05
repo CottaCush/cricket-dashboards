@@ -2,6 +2,7 @@
 
 namespace CottaCush\Cricket\Dashboards\Widgets;
 
+use CottaCush\Cricket\Generators\SQL\SQLGenerator;
 use CottaCush\Yii2\Helpers\Html;
 
 /**
@@ -11,7 +12,7 @@ use CottaCush\Yii2\Helpers\Html;
  */
 class CountWidget extends BaseDashboardWidget
 {
-    protected $queryFunction = 'queryScalar';
+    protected $queryFunction = SQLGenerator::QUERY_SCALAR;
 
     /**
      * @author Olawale Lawal <wale@cottacush.com>
@@ -23,9 +24,9 @@ class CountWidget extends BaseDashboardWidget
 
     protected function renderBody()
     {
-        echo $this->beginDiv('card-body p-0 cricket-dashboard-view__count-widget');
+        echo $this->beginDiv('card-body cricket-dashboard-view__count-widget');
 
-        echo $this->beginDiv('cricket-dashboard-view__count-widget--data p-3');
+        echo $this->beginDiv('cricket-dashboard-view__count-widget--data');
         echo Html::tag('span', $this->model->name, ['class' => 'cricket-dashboard-view__count-widget--data-label']);
         echo Html::tag('br');
         echo Html::tag('span', $this->getData(), ['class' => 'cricket-dashboard-view__count-widget--data-value']);

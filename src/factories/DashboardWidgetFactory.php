@@ -15,15 +15,6 @@ use yii\db\Connection;
 
 class DashboardWidgetFactory
 {
-    const TYPE_COUNT = 'count';
-    const TYPE_LINE_CHART = 'line-chart';
-    const TYPE_PIE_CHART = 'pie-chart';
-    const TYPE_AREA_GRAPH = 'area-graph';
-    const TYPE_BAR_CHART = 'bar-chart';
-    const TYPE_DOUGHNUT = 'doughnut';
-    const TYPE_SCATTER_PLOT = 'scatter-plot';
-    const TYPE_TABLE = 'table';
-
     private $dbConnection;
 
     public function __construct(Connection $dbConnection = null)
@@ -41,33 +32,33 @@ class DashboardWidgetFactory
         $config = ['model' => $model, 'dbConnection' => $this->dbConnection];
 
         switch ($model->type) {
-            case self::TYPE_TABLE:
+            case BaseDashboardWidget::TYPE_TABLE:
                 $widget = new TableWidget($config);
                 break;
 
-            case self::TYPE_BAR_CHART:
+            case BaseDashboardWidget::TYPE_BAR_CHART:
                 $widget = new BarChartWidget($config);
                 break;
 
-            case self::TYPE_AREA_GRAPH:
+            case BaseDashboardWidget::TYPE_AREA_GRAPH:
                 $config['fill'] = true;
-            case self::TYPE_LINE_CHART:
+            case BaseDashboardWidget::TYPE_LINE_CHART:
                 $widget = new LineChartWidget($config);
                 break;
 
-            case self::TYPE_PIE_CHART:
+            case BaseDashboardWidget::TYPE_PIE_CHART:
                 $widget = new PieChartWidget($config);
                 break;
 
-            case self::TYPE_DOUGHNUT:
+            case BaseDashboardWidget::TYPE_DOUGHNUT:
                 $widget = new DoughnutWidget($config);
                 break;
 
-            case self::TYPE_SCATTER_PLOT:
+            case BaseDashboardWidget::TYPE_SCATTER_PLOT:
                 $widget = new ScatterPlotWidget($config);
                 break;
 
-            case self::TYPE_COUNT:
+            case BaseDashboardWidget::TYPE_COUNT:
             default:
                 $widget = new CountWidget($config);
                 break;

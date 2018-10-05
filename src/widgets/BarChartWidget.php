@@ -11,8 +11,6 @@ use yii\helpers\ArrayHelper;
  */
 class BarChartWidget extends BaseChartsJsWidget
 {
-    protected $type = 'bar';
-
     protected function getTransformedData()
     {
         $columns = $this->getDataColumns();

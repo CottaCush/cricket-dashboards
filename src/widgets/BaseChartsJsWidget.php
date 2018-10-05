@@ -4,7 +4,6 @@ namespace CottaCush\Cricket\Dashboards\Widgets;
 
 use CottaCush\Cricket\Dashboards\Assets\ChartJSAsset;
 use CottaCush\Yii2\Helpers\Html;
-use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\JsExpression;
@@ -13,9 +12,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
 {
     public $options;
     public $clientOptions = [];
-
     public $plugins;
-    protected $type;
 
     public static $colours = [
         ['hex' => '#E9967A', 'rgb' => '233, 150, 122'],
@@ -56,17 +53,20 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
         ['hex' => '#FFA07A', 'rgb' => '255, 160, 122']
     ];
 
+    private static $chartTypeMap = [
+        self::TYPE_BAR_CHART => 'bar',
+        self::TYPE_PIE_CHART => 'pie',
+        self::TYPE_LINE_CHART => 'line',
+        self::TYPE_DOUGHNUT => 'doughnut',
+        self::TYPE_SCATTER_PLOT => 'scatter',
+    ];
+
     /**
      * @author Olawale Lawal <wale@cottacush.com>
-     * @throws InvalidConfigException
      */
     public function init()
     {
         parent::init();
-
-        if ($this->type === null) {
-            throw new InvalidConfigException("The 'type' option is required");
-        }
 
         if (!isset($this->options['id'])) {
             $this->options['id'] = 'widget_' . $this->model->id;
@@ -78,7 +78,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
     protected function renderHeader()
     {
         echo $this->beginDiv('card-header border-bottom');
-        echo Html::tag('span', $this->model->name, ['class' => 'h4 p-1']);
+        echo Html::tag('span', $this->model->name, ['class' => 'h4']);
         echo $this->endDiv();
     }
 
@@ -96,7 +96,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
 
     private function renderChart()
     {
-        echo $this->beginDiv('pt-4');
+        echo $this->beginDiv('');
         echo Html::tag('canvas', null, $this->options);
         echo $this->endDiv();
     }
@@ -109,7 +109,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
         $id = $this->options['id'];
         ChartJsAsset::register($this->view);
         $config = Json::encode([
-            'type' => $this->type,
+            'type' => $this->getChartsJSType(),
             'data' => $this->getTransformedData() ?: new JsExpression('{}'),
             'options' => $this->clientOptions ?: new JsExpression('{}'),
             'plugins' => $this->plugins
@@ -150,5 +150,10 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
     protected function getTransformedData()
     {
         return $this->data;
+    }
+
+    private function getChartsJSType()
+    {
+        return ArrayHelper::getValue(self::$chartTypeMap, $this->model->type, 'bar');
     }
 }

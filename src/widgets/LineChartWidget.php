@@ -11,7 +11,6 @@ use yii\helpers\ArrayHelper;
  */
 class LineChartWidget extends BaseChartsJsWidget
 {
-    protected $type = 'line';
     public $fill = false;
 
     protected function getTransformedData()

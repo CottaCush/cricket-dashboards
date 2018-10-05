@@ -2,8 +2,6 @@
 
 namespace CottaCush\Cricket\Dashboards\Widgets;
 
-use yii\helpers\ArrayHelper;
-
 /**
  * Class DoughnutWidget
  * @package CottaCush\Cricket\Dashboards\Widgets
@@ -11,5 +9,4 @@ use yii\helpers\ArrayHelper;
  */
 class DoughnutWidget extends PieChartWidget
 {
-    public $type = 'doughnut';
 }

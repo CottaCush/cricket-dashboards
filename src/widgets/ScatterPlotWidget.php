@@ -9,13 +9,6 @@ namespace CottaCush\Cricket\Dashboards\Widgets;
  */
 class ScatterPlotWidget extends BaseChartsJsWidget
 {
-    protected $type = 'scatter';
-
-    public function init()
-    {
-        parent::init();
-    }
-
     protected function getTransformedData()
     {
         $columns = $this->getDataColumns();
