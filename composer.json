@@ -13,7 +13,7 @@
     "license": "MIT",
     "minimum-stability": "stable",
     "require": {
-        "cottacush/cricket-base": "v0.6"
+        "cottacush/cricket-base": "^0.6.0"
     },
     "authors": [
       {
