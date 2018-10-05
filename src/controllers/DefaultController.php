@@ -1,17 +1,15 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Controllers;
+namespace CottaCush\Cricket\Dashboards\Controllers;
 
 use CottaCush\Cricket\Constants\Messages;
 use CottaCush\Cricket\Controllers\BaseCricketController;
-use CottaCush\Cricket\Dashboard\Models\Dashboard;
+use CottaCush\Cricket\Dashboards\Models\Dashboard;
 use CottaCush\Cricket\Libs\Utils;
 use yii\helpers\ArrayHelper;
 
 class DefaultController extends BaseCricketController
 {
-    const SQL_QUERY_KEY = '_sql_query_';
-
     /**
      * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
      * @return string

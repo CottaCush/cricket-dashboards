@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Dashboard\Interfaces;
+namespace CottaCush\Cricket\Dashboards\Interfaces;
 
 /**
  * Interface WidgetInterface

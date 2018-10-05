@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Assets;
+namespace CottaCush\Cricket\Dashboards\Assets;
 
 /**
  * Class DashboardsAsset
@@ -10,7 +10,8 @@ namespace CottaCush\Cricket\Report\Assets;
 class DashboardsAsset extends BaseDashboardsAsset
 {
     public $css = [
-        'css/styles.css'
+        'css/styles.css',
+        'css/custom-bootstrap.css'
     ];
 
     public $depends = [
