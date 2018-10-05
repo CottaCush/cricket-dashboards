@@ -1,4 +1,4 @@
-.cricket-wrapper .dashboard-list__item {
+.cricket-wrapper .cricket-dashboard-list__item {
   height: 150px;
   padding: 30px;
   border-radius: 4px;
@@ -7,10 +7,10 @@
   background: #fff;
   text-align: center;
 }
-.cricket-wrapper .dashboard-list__item:hover {
+.cricket-wrapper .cricket-dashboard-list__item:hover {
   background: #f3f3f3;
 }
-.cricket-wrapper .dashboard-list__item-link {
+.cricket-wrapper .cricket-dashboard-list__item-link {
   text-decoration: none;
   font-size: 24px;
   display: inline-block;

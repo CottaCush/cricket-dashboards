@@ -33,15 +33,15 @@ class DashboardListWidget extends BaseCricketWidget
 
     private function renderDashboards()
     {
-        echo $this->beginDiv('dashboard-list');
+        echo $this->beginDiv('cricket-dashboard-list');
         echo $this->beginDiv('row');
         foreach ($this->dashboards as $dashboard) {
             echo $this->beginDiv('col-lg-3 col-md-3 col-sm-4 col-xs-12');
-            echo $this->beginDiv('dashboard-list__item');
+            echo $this->beginDiv('cricket-dashboard-list__item');
             echo Html::a(
                 ArrayHelper::getValue($dashboard, 'name'),
                 Url::toRoute(['view', 'id' => Utils::encodeId(ArrayHelper::getValue($dashboard, 'id'))]),
-                ['class' => 'dashboard-list__item-link']
+                ['class' => 'cricket-dashboard-list__item-link']
             );
             echo $this->endDiv();
             echo $this->endDiv();
