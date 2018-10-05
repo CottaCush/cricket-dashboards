@@ -1,6 +1,6 @@
 <?php
 
-namespace CottaCush\Cricket\Report\Assets;
+namespace CottaCush\Cricket\Dashboard\Assets;
 
 /**
  * Class DashboardsAsset

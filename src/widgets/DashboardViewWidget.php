@@ -5,9 +5,10 @@ namespace CottaCush\Cricket\Dashboard\Widgets;
 use CottaCush\Cricket\Dashboard\Factories\DashboardWidgetFactory;
 use CottaCush\Cricket\Dashboard\Models\Dashboard;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
-use CottaCush\Cricket\Report\Assets\DashboardViewAsset;
+use CottaCush\Cricket\Dashboard\Assets\DashboardViewAsset;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
+use CottaCush\Yii2\Widgets\EmptyStateWidget;
 use yii\db\Connection;
 use yii\helpers\ArrayHelper;
 
@@ -50,9 +51,10 @@ class DashboardViewWidget extends BaseCricketWidget
     public function run()
     {
         $this->renderTitle();
-
-        foreach ($this->locationalWidgets as $location => $widgets) {
-            $this->renderLocation($location);
+        if (!$this->widgets) {
+            $this->renderEmptyStateWidget();
+        } else {
+            $this->renderDashboard();
         }
     }
 
@@ -66,17 +68,31 @@ class DashboardViewWidget extends BaseCricketWidget
         echo $this->endDiv();
     }
 
+    private function renderDashboard()
+    {
+        echo $this->beginDiv('dashboard-view');
+        foreach ($this->locationalWidgets as $location => $widgets) {
+            $this->renderLocation($location);
+        }
+        echo $this->endDiv();
+    }
+
+    private function renderEmptyStateWidget()
+    {
+        echo EmptyStateWidget::widget([
+            'icon' => 'dropbox',
+            'description' => 'No contents have been added to the dashboard yet'
+        ]);
+    }
+
     private function renderLocation($location)
     {
         $locationWidgets = ArrayHelper::getValue($this->locationalWidgets, $location);
 
-        echo Html::tag('h2', null);
-        echo $this->beginDiv('container dashboard-view');
         echo $this->beginDiv('row');
         foreach ($locationWidgets as $widget) {
             $this->factory->createWidget($widget)->renderWidget();
         }
-        echo $this->endDiv();
         echo $this->endDiv();
     }
 }

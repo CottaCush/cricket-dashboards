@@ -25,16 +25,15 @@ class CountWidget extends BaseDashboardWidget
         $data = array_values($data);
 
         echo $this->beginDiv(self::$sizes[$this->model->location]);
-        echo $this->beginDiv('panel panel-default dashboard-view__count-widget');
+        echo $this->beginDiv('panel panel-default dashboard-view__count-widget equal-height');
         echo $this->beginDiv('panel-body');
         echo $this->beginDiv('dashboard-view__count-widget--data');
-        echo Html::tag('span', $this->model->name, ['class' => 'dashboard-view__count-widget--data-label']);
-        echo Html::tag('br');
         echo Html::tag(
-            'span',
+            'h1',
             ArrayHelper::getValue($data, '0', 0),
             ['class' => 'dashboard-view__count-widget--data-value']
         );
+        echo Html::tag('span', $this->model->name, ['class' => 'dashboard-view__count-widget--data-label']);
         echo $this->endDiv();
         echo $this->endDiv();
         echo $this->endDiv();

@@ -2,7 +2,7 @@
 
 namespace CottaCush\Cricket\Dashboard\Widgets;
 
-use CottaCush\Cricket\Report\Assets\DashboardListAsset;
+use CottaCush\Cricket\Dashboard\Assets\DashboardListAsset;
 use CottaCush\Cricket\Report\Libs\Utils;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
@@ -33,18 +33,20 @@ class DashboardListWidget extends BaseCricketWidget
 
     private function renderDashboards()
     {
-        $this->beginDiv('container');
-        $this->beginDiv('row dashboard-list');
+        echo $this->beginDiv('dashboard-list');
+        echo $this->beginDiv('row');
         foreach ($this->dashboards as $dashboard) {
-            $this->beginDiv('dashboard-list__item col-sm');
+            echo $this->beginDiv('col-lg-3 col-md-3 col-sm-4 col-xs-12');
+            echo $this->beginDiv('dashboard-list__item');
             echo Html::a(
                 ArrayHelper::getValue($dashboard, 'name'),
                 Url::toRoute(['view', 'id' => Utils::encodeId(ArrayHelper::getValue($dashboard, 'id'))]),
                 ['class' => 'dashboard-list__item-link']
             );
-            $this->endDiv();
+            echo $this->endDiv();
+            echo $this->endDiv();
         }
-        $this->endDiv();
-        $this->endDiv();
+        echo $this->endDiv();
+        echo $this->endDiv();
     }
 }
