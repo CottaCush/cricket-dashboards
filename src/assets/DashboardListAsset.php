@@ -10,6 +10,6 @@ namespace CottaCush\Cricket\Dashboards\Assets;
 class DashboardListAsset extends BaseDashboardsAsset
 {
     public $depends = [
-        'CottaCush\Cricket\Report\Assets\DashboardsAsset',
+        'CottaCush\Cricket\Dashboards\Assets\DashboardsAsset',
     ];
 }
