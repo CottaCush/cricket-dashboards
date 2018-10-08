@@ -38,9 +38,9 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     protected $queryFunction = SQLGenerator::QUERY_ALL;
 
     public static $sizes = [
-        self::LOCATION_TOP => 'col-lg-2 col-md-3 col-sm-6 col-12 my-4',
-        self::LOCATION_MIDDLE => 'col-lg-4 col-md-6 col-12 my-4',
-        self::LOCATION_BOTTOM => 'col-md-6 col-sm-12 my-4',
+        self::LOCATION_TOP => 'col-lg-3 col-md-3 col-sm-6 col-12 form-group',
+        self::LOCATION_MIDDLE => 'col-lg-4 col-md-6 col-12 form-group',
+        self::LOCATION_BOTTOM => 'col-md-6 col-sm-12 form-group',
     ];
 
     public $dbConnection;
@@ -55,7 +55,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     public function renderWidget()
     {
         echo $this->beginDiv($this->getSize());
-        echo $this->beginDiv('card card-small');
+        echo $this->beginDiv('cricket-card cricket-card-small equal-height');
 
         $this->renderHeader();
 
@@ -90,7 +90,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
 
     protected function renderHeader()
     {
-        echo $this->beginDiv('card-header border-bottom');
+        echo $this->beginDiv('cricket-card-header border-bottom');
         echo Html::tag('span', $this->model->name, ['class' => 'h4']);
         echo $this->endDiv();
     }
@@ -108,7 +108,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
             return;
         }
 
-        echo $this->beginDiv('row border-bottom px-2 py-3 bg-light');
+        echo $this->beginDiv('row border-bottom bg-light');
         echo '';
         echo $this->endDiv();
     }

@@ -10,7 +10,7 @@ namespace CottaCush\Cricket\Dashboards\Assets;
 class DashboardsAsset extends BaseDashboardsAsset
 {
     public $css = [
-        'css/styles.css',
+        'css/styles.css'
     ];
 
     public $depends = [

@@ -36,7 +36,7 @@ class DashboardListWidget extends BaseCricketWidget
         echo $this->beginDiv('cricket-dashboard-list');
         echo $this->beginDiv('row');
         foreach ($this->dashboards as $dashboard) {
-            echo $this->beginDiv('col-lg-3 col-md-3 col-sm-4 col-xs-12');
+            echo $this->beginDiv('col-lg-3 col-md-3 col-sm-4 col-xs-12 form-group');
             echo $this->beginDiv('cricket-dashboard-list__item');
             echo Html::a(
                 ArrayHelper::getValue($dashboard, 'name'),

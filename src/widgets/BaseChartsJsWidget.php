@@ -77,14 +77,14 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
 
     protected function renderHeader()
     {
-        echo $this->beginDiv('card-header border-bottom');
+        echo $this->beginDiv('cricket-card-header border-bottom');
         echo Html::tag('span', $this->model->name, ['class' => 'h4']);
         echo $this->endDiv();
     }
 
     protected function renderBody()
     {
-        echo $this->beginDiv('card-body pt-0');
+        echo $this->beginDiv('cricket-card-body');
 
         $this->renderFilter();
         $this->renderChart();
@@ -138,7 +138,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
 
     protected function renderFooter()
     {
-        echo $this->beginDiv('card-footer border-top');
+        echo $this->beginDiv('cricket-card-footer border-top');
 
         echo $this->beginDiv('text-right ');
         echo '&nbsp;';
