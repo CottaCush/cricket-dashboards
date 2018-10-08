@@ -1,11 +1,12 @@
 @white: #fff;
 .cricket-wrapper {
-  .card {
+  .cricket-card {
+    border-radius: 4px;
     box-shadow: 0 2px 0 rgba(90, 97, 105, .07),
                 0 4px 8px rgba(90, 97, 105, .08),
                 0 10px 10px rgba(90, 97, 105, .03),
                 0 7px 70px rgba(90, 97, 105, .08);
-    .card-text {
+    .cricket-card-text {
       margin-bottom: 1.5625rem;
     }
     a {
@@ -14,41 +15,41 @@
       }
     }
   }
-  .card-small {
+  .cricket-card-small {
     box-shadow: 0 2px 0 rgba(90, 97, 105, .11),
                 0 4px 8px rgba(90, 97, 105, .12),
                 0 10px 10px rgba(90, 97, 105, .06),
                 0 7px 70px rgba(90, 97, 105, .1);
-    .card-body {
+    .cricket-card-body {
       padding: 1rem 1.5rem;
     }
-    .card-footer {
+    .cricket-card-footer {
       padding: 1rem 1.5rem;
     }
-    .card-header {
+    .cricket-card-header {
       padding: 1rem 1.5rem;
     }
   }
-  .card-body {
+  .cricket-card-body {
     > p {
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
-  .card-title {
+  .cricket-card-title {
     font-weight: 500;
     margin-bottom: .75rem;
   }
-  .card-subtitle {
+  .cricket-card-subtitle {
     margin-top: -1.09375rem;
   }
-  .card-link {
-    & + .card-link {
+  .cricket-card-link {
+    & + .cricket-card-link {
       margin-left: 1.875rem;
     }
   }
-  .card-header {
+  .cricket-card-header {
     padding: 1.09375rem 1.875rem;
     background-color: @white;
     border-bottom: none;
@@ -58,7 +59,7 @@
       border-radius: 4px 4px 0 0;
     }
   }
-  .card-footer {
+  .cricket-card-footer {
     padding: 1.09375rem 1.875rem;
     background-color: @white;
     border-top: none;

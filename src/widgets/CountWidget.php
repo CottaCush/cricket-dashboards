@@ -22,13 +22,22 @@ class CountWidget extends BaseDashboardWidget
         return;
     }
 
+    public function init()
+    {
+        parent::init();
+
+        if (empty($this->data)) {
+            $this->data = 0;
+        }
+    }
+
     protected function renderBody()
     {
-        echo $this->beginDiv('card-body cricket-dashboard-view__count-widget equal-height');
+        echo $this->beginDiv('cricket-card-body cricket-dashboard-view__count-widget');
         echo $this->beginDiv('cricket-dashboard-view__count-widget--data');
         echo Html::tag(
             'h1',
-            $this->getData(),
+            $this->data,
             ['class' => 'cricket-dashboard-view__count-widget--data-value']
         );
         echo Html::tag('span', $this->model->name, ['class' => 'cricket-dashboard-view__count-widget--data-label']);

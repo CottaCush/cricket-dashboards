@@ -18,13 +18,10 @@
   line-height: 1.3;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget {
-  border-radius: 4px;
-  -webkit-box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
-          box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
   background: #fff;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget--data {
-  padding: 5px 0;
+  padding: 15px 0;
   text-align: center;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget--data-label {
@@ -37,58 +34,59 @@
   font-weight: 500;
   color: #777;
 }
-.cricket-wrapper .card {
+.cricket-wrapper .cricket-card {
+  border-radius: 4px;
   -webkit-box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
           box-shadow: 0 2px 0 rgba(90, 97, 105, 0.07), 0 4px 8px rgba(90, 97, 105, 0.08), 0 10px 10px rgba(90, 97, 105, 0.03), 0 7px 70px rgba(90, 97, 105, 0.08);
 }
-.cricket-wrapper .card .card-text {
+.cricket-wrapper .cricket-card .cricket-card-text {
   margin-bottom: 1.5625rem;
 }
-.cricket-wrapper .card a:hover {
+.cricket-wrapper .cricket-card a:hover {
   text-decoration: none;
 }
-.cricket-wrapper .card-small {
+.cricket-wrapper .cricket-card-small {
   -webkit-box-shadow: 0 2px 0 rgba(90, 97, 105, 0.11), 0 4px 8px rgba(90, 97, 105, 0.12), 0 10px 10px rgba(90, 97, 105, 0.06), 0 7px 70px rgba(90, 97, 105, 0.1);
           box-shadow: 0 2px 0 rgba(90, 97, 105, 0.11), 0 4px 8px rgba(90, 97, 105, 0.12), 0 10px 10px rgba(90, 97, 105, 0.06), 0 7px 70px rgba(90, 97, 105, 0.1);
 }
-.cricket-wrapper .card-small .card-body {
+.cricket-wrapper .cricket-card-small .cricket-card-body {
   padding: 1rem 1.5rem;
 }
-.cricket-wrapper .card-small .card-footer {
+.cricket-wrapper .cricket-card-small .cricket-card-footer {
   padding: 1rem 1.5rem;
 }
-.cricket-wrapper .card-small .card-header {
+.cricket-wrapper .cricket-card-small .cricket-card-header {
   padding: 1rem 1.5rem;
 }
-.cricket-wrapper .card-body > p:last-child {
+.cricket-wrapper .cricket-card-body > p:last-child {
   margin-bottom: 0;
 }
-.cricket-wrapper .card-title {
+.cricket-wrapper .cricket-card-title {
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
-.cricket-wrapper .card-subtitle {
+.cricket-wrapper .cricket-card-subtitle {
   margin-top: -1.09375rem;
 }
-.cricket-wrapper .card-link + .card-link {
+.cricket-wrapper .cricket-card-link + .cricket-card-link {
   margin-left: 1.875rem;
 }
-.cricket-wrapper .card-header {
+.cricket-wrapper .cricket-card-header {
   padding: 1.09375rem 1.875rem;
   background-color: #fff;
   border-bottom: none;
   text-align: left;
   font-weight: 500;
 }
-.cricket-wrapper .card-header:first-child {
+.cricket-wrapper .cricket-card-header:first-child {
   border-radius: 4px 4px 0 0;
 }
-.cricket-wrapper .card-footer {
+.cricket-wrapper .cricket-card-footer {
   padding: 1.09375rem 1.875rem;
   background-color: #fff;
   border-top: none;
 }
-.cricket-wrapper .card-footer:last-child {
+.cricket-wrapper .cricket-card-footer:last-child {
   border-radius: 0 0 0.625rem 0.625rem;
 }
 .cricket-wrapper .form-control {
