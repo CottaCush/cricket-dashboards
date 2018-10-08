@@ -11,7 +11,6 @@ class DashboardsAsset extends BaseDashboardsAsset
 {
     public $css = [
         'css/styles.css',
-        'css/custom-bootstrap.css'
     ];
 
     public $depends = [
