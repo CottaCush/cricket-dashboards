@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a0c9be5bc30089519f8b7cdea5ee2b8",
+    "content-hash": "1c6757ecf01f3b65fb80a032098ac294",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -370,16 +370,16 @@
         },
         {
             "name": "cottacush/cricket-base",
-            "version": "v0.6",
+            "version": "v0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CottaCush/cricket-base.git",
-                "reference": "4335199ed5b871816e56a610002d54cae1c5345e"
+                "reference": "6cbda9600efbd4e8cdfaa9b38102d8015c76290c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/4335199ed5b871816e56a610002d54cae1c5345e",
-                "reference": "4335199ed5b871816e56a610002d54cae1c5345e",
+                "url": "https://api.github.com/repos/CottaCush/cricket-base/zipball/6cbda9600efbd4e8cdfaa9b38102d8015c76290c",
+                "reference": "6cbda9600efbd4e8cdfaa9b38102d8015c76290c",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "report template",
                 "yii2"
             ],
-            "time": "2018-10-04T13:14:19+00:00"
+            "time": "2018-10-05T14:40:51+00:00"
         },
         {
             "name": "cottacush/yii2-widgets",
@@ -608,16 +608,16 @@
         },
         {
             "name": "kartik-v/yii2-krajee-base",
-            "version": "v1.9.2",
+            "version": "v1.9.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "2c007b06602d4af59c7d3e708921d539bc81bc40"
+                "reference": "1693374160c24443524ddc23508d2eb2955443f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/2c007b06602d4af59c7d3e708921d539bc81bc40",
-                "reference": "2c007b06602d4af59c7d3e708921d539bc81bc40",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/1693374160c24443524ddc23508d2eb2955443f4",
+                "reference": "1693374160c24443524ddc23508d2eb2955443f4",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +655,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-08-20T18:10:23+00:00"
+            "time": "2018-09-27T18:02:35+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-select2",
