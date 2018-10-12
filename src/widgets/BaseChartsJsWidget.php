@@ -59,6 +59,7 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
         self::TYPE_LINE_CHART => 'line',
         self::TYPE_DOUGHNUT => 'doughnut',
         self::TYPE_SCATTER_PLOT => 'scatter',
+        self::TYPE_AREA_GRAPH => 'line'
     ];
 
     /**
