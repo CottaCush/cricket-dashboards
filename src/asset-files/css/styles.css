@@ -93,5 +93,140 @@
   height: auto;
   font-size: 1em;
 }
+/*
+* Component: Dropdown menus
+* -------------------------
+*/
+.cricket-dropdown .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.cricket-dropdown .dropup,
+.cricket-dropdown .dropdown {
+  position: relative;
+}
+.cricket-dropdown .dropdown-toggle:focus {
+  outline: 0;
+}
+.cricket-dropdown .dropdown-menu > li > a {
+  color: #777;
+}
+.cricket-dropdown .dropdown-menu > li > a > .glyphicon,
+.cricket-dropdown .dropdown-menu > li > a > .fa,
+.cricket-dropdown .dropdown-menu > li > a > .ion {
+  margin-right: 10px;
+}
+.cricket-dropdown .dropdown-menu > li > a:hover {
+  background-color: #777;
+  color: #333;
+  text-decoration: none;
+}
+.cricket-dropdown .dropdown-menu > .divider {
+  background-color: #eee;
+}
+.cricket-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0 !important;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.cricket-dropdown .dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.cricket-dropdown .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.cricket-dropdown .dropdown-menu > li > a:hover,
+.cricket-dropdown .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.cricket-dropdown .open > .dropdown-menu {
+  display: block;
+}
+.cricket-dropdown .open > a {
+  outline: 0;
+}
+.cricket-dropdown .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+.cricket-dropdown .dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.cricket-dropdown .dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777777;
+  white-space: nowrap;
+}
+.cricket-dropdown .dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+.cricket-dropdown .pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.cricket-dropdown .dropup .caret,
+.cricket-dropdown .navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9;
+  content: "";
+}
+.cricket-dropdown .dropup .dropdown-menu,
+.cricket-dropdown .navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+@media (min-width: 768px) {
+  .cricket-dropdown .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .cricket-dropdown .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
 
 /*# sourceMappingURL=maps/styles.css.map */
