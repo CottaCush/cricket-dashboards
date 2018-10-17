@@ -3,9 +3,9 @@
 namespace CottaCush\Cricket\Dashboards\Assets;
 
 /**
- * Class DashboardsAsset
+ * Class DownloadDashboardAsset
  * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
- * @package CottaCush\Cricket\Report\Assets
+ * @package CottaCush\Cricket\Dashboards\Assets
  */
 class DownloadDashboardAsset extends BaseDashboardsAsset
 {
