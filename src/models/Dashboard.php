@@ -22,6 +22,12 @@ use CottaCush\Cricket\Models\BaseCricketModel;
  */
 class Dashboard extends BaseCricketModel
 {
+    const DOWNLOAD_FORMATS = [
+        ['type' => 'jpeg', 'class' => 'download-dashboard-link', 'id' => 'downloadJpeg'],
+        ['type' => 'png', 'class' => 'download-dashboard-link', 'id' => 'downloadPng'],
+        ['type' => 'pdf', 'class' => 'download-dashboard-link', 'id' => 'downloadPdf'],
+    ];
+
     /**
      * {@inheritdoc}
      */
