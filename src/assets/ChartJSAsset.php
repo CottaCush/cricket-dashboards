@@ -22,6 +22,7 @@ class ChartJSAsset extends BaseDashboardsAsset
 
     public $productionJs = [
         'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js',
+        'charts_defaults.js'
     ];
 
     public $depends = [
