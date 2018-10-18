@@ -8,6 +8,7 @@ use CottaCush\Cricket\Dashboards\Models\Dashboard;
 use CottaCush\Cricket\Generators\SQL\SQLQueryBuilderParser;
 use CottaCush\Cricket\Widgets\BaseCricketWidget;
 use CottaCush\Yii2\Helpers\Html;
+use CottaCush\Yii2\Widgets\Bootstrap\Modal;
 use CottaCush\Yii2\Widgets\EmptyStateWidget;
 use yii\db\Connection;
 use yii\helpers\ArrayHelper;
@@ -57,6 +58,7 @@ class DashboardViewWidget extends BaseCricketWidget
         } else {
             $this->renderDashboard();
         }
+        $this->renderZoomModal();
     }
 
     private function renderTitle()
@@ -97,5 +99,19 @@ class DashboardViewWidget extends BaseCricketWidget
             $dashboardWidget->renderWidget();
         }
         echo $this->endDiv();
+    }
+
+    private function renderZoomModal()
+    {
+        Modal::begin([
+            'header' => '<h4 class="modal-title"></h4>',
+            'options' => [
+                'id' => 'zoomWidgetModal',
+                'data-generic-modal' => 'true',
+                'class' => 'cricket-zoom-in-modal'
+            ],
+            'footer' => ''
+        ]);
+        Modal::end();
     }
 }

@@ -78,7 +78,22 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
     protected function renderHeader()
     {
         echo $this->beginDiv('cricket-card-header border-bottom');
-        echo Html::tag('span', $this->model->name, ['class' => 'h4']);
+        echo Html::tag('span', $this->model->name, ['class' => 'h4 cricket-widget-title']);
+        echo Html::tag(
+            'span',
+            Html::a(
+                '',
+                '',
+                [
+                    'class' => "fa fa-search-plus zoom-widget-btn",
+                    'id' => "zoom-widget-btn-{$this->model->id}",
+                    'data-toggle' => 'modal',
+                    'data-target' => '#zoomWidgetModal',
+                    'data-html2canvas-ignore' => true
+                ]
+            ),
+            ['class' => 'pull-right']
+        );
         echo $this->endDiv();
     }
 
@@ -116,6 +131,15 @@ abstract class BaseChartsJsWidget extends BaseDashboardWidget
         ]);
 
         $js[] = "var chartJS_{$id} = new Chart($('#{$id}'), {$config});";
+
+        //Script to handle zooming of chart widgets
+        $js[] = "$('#zoom-widget-btn-{$this->model->id}').on('click', function () {
+            modalTitle  = $(this).parent().parent().parent().find($('.cricket-widget-title')).html();
+            imageSrc = chartJS_{$id}.toBase64Image();
+            $('#zoomWidgetModal').find('.modal-title').html(modalTitle);
+            $('#zoomWidgetModal').find('.modal-body').html('<canvas id=\"modal{$id}\"></canvas>');
+            var canvas{$id} = new Chart($('#modal{$id}'), {$config});
+        });";
 
         $this->view->registerJs(implode("\n", $js));
     }

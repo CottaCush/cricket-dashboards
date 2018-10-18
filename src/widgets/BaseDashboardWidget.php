@@ -55,7 +55,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     public function renderWidget()
     {
         echo $this->beginDiv($this->getSize());
-        echo $this->beginDiv('cricket-card cricket-card-small equal-height');
+        echo $this->beginDiv('cricket-card cricket-card-small');
 
         $this->renderHeader();
 
@@ -91,7 +91,22 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     protected function renderHeader()
     {
         echo $this->beginDiv('cricket-card-header border-bottom');
-        echo Html::tag('span', $this->model->name, ['class' => 'h4']);
+        echo Html::tag('span', $this->model->name, ['class' => 'h4 cricket-widget-title']);
+        echo Html::tag(
+            'span',
+            Html::a(
+                '',
+                '',
+                [
+                    'class' => "fa fa-search-plus zoom-widget-btn",
+                    'id' => "zoom-widget-btn-{$this->model->id}",
+                    'data-toggle' => 'modal',
+                    'data-target' => '#zoomWidgetModal',
+                    'data-html2canvas-ignore' => true
+                ]
+            ),
+            ['class' => 'pull-right']
+        );
         echo $this->endDiv();
     }
 
