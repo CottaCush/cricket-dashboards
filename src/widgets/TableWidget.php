@@ -24,11 +24,28 @@ class TableWidget extends BaseDashboardWidget
 
         $this->renderTable();
         echo $this->endDiv();
+        $this->registerHelperScript();
+    }
+
+    /**
+     * @author Taiwo Ladipo <taiwo.ladipo@cottacush.com>
+     * Registers the required js script to enable zooming table widget
+     */
+    public function registerHelperScript()
+    {
+        $js[] = "$('#zoom-widget-btn-{$this->model->id}').on('click', function () {
+            modalContent = $(this).parent().parent().parent().find($('.card-body')).html();
+            modalTitle = $(this).parent().parent().parent().find($('.cricket-widget-title')).html();
+            $('#zoomWidgetModal').find('.modal-title').html(modalTitle);
+            $('#zoomWidgetModal').find('.modal-body').html(modalContent);
+        });";
+
+        $this->view->registerJs(implode("\n", $js));
     }
 
     private function renderTable()
     {
-        echo Html::beginTag('table', ['class' => 'table table-bordered']);
+        echo Html::beginTag('table', ['class' => 'table table-striped']);
         $this->renderTableHeader();
         $this->renderTableBody();
         echo Html::endTag('table');
