@@ -12,6 +12,8 @@ use CottaCush\Yii2\Widgets\Bootstrap\Modal;
 use CottaCush\Yii2\Widgets\EmptyStateWidget;
 use yii\db\Connection;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
+use yii\web\View;
 
 /**
  * Class DashboardViewWidget
@@ -46,6 +48,8 @@ class DashboardViewWidget extends BaseCricketWidget
         $this->factory = new DashboardWidgetFactory($this->dbConnection);
         DashboardViewAsset::register($this->view);
         krsort($this->locationalWidgets);
+
+        $this->view->registerJs('var dashboardName = ' . Json::encode($this->dashboard->name) . ';', View::POS_HEAD);
 
         parent::init();
     }

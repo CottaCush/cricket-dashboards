@@ -31,6 +31,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     const TYPE_PIE_CHART = 'pie-chart';
     const TYPE_SCATTER_PLOT = 'scatter-plot';
     const TYPE_TABLE = 'table';
+    const TYPE_PERIODIC_COUNT = 'periodic-count';
 
     protected $data;
     protected $columns;
