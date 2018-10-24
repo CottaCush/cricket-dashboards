@@ -30,7 +30,6 @@ class PeriodicCountWidget extends BaseDashboardWidget
 
     protected function renderBody()
     {
-
         $latestData = array_pop($this->data);
         $count = ArrayHelper::getValue($latestData, 'count', 0);
         $percentageChange = ArrayHelper::getValue($latestData, 'percentage_change', 0);
@@ -68,12 +67,12 @@ class PeriodicCountWidget extends BaseDashboardWidget
     {
         if ($value > 0) {
             return '<span class = "text-success">
-                <span class = "fa fa-caret-up"></span>' . ' ' . number_format($value, 2) . '% ' .
-                '</span>';
-        } elseif ($value > 0) {
+                    <span class = "fa fa-caret-up"></span>' . ' ' . number_format($value, 2) . '% ' .
+                    '</span>';
+        } elseif ($value < 0) {
             return '<span class = "text-danger">
-                <span class = "fa fa-caret-down"></span>' . ' ' . number_format($value, 2) . '% ' .
-                '</span>';
+                    <span class = "fa fa-caret-down"></span>' . ' ' . number_format($value, 2) . '% ' .
+                    '</span>';
         }
         return '<span class = "text-muted">' . $value . ' ' . '</span>';
     }
