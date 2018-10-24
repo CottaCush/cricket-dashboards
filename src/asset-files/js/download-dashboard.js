@@ -24,12 +24,11 @@
                 newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
 
             if (extension === TYPE_PDF) {
-                var doc = new jsPDF('p', 'px', 'a3');
+                var doc = new jsPDF('p', 'px', 'a2');
                 doc.addImage(imageData, 'png', 10, 20);
-                doc.save('dashboard.' + extension);
+                doc.save(dashboardName + '.' + extension);
             } else {
-                thisLink.attr("download", 'dashboard.' + extension).attr("href", newData);
-
+                thisLink.attr("download", dashboardName + '.' + extension).attr("href", newData);
             }
         });
 

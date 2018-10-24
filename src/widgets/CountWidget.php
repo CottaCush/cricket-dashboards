@@ -33,7 +33,7 @@ class CountWidget extends BaseDashboardWidget
 
     protected function renderBody()
     {
-        echo $this->beginDiv('cricket-card-body cricket-dashboard-view__count-widget');
+        echo $this->beginDiv('cricket-dashboard-view__count-widget equal-height');
         echo $this->beginDiv('cricket-dashboard-view__count-widget--data');
         echo Html::tag(
             'h1',

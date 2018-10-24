@@ -22,25 +22,44 @@
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget {
   background: #fff;
+  padding-bottom: 10px;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget--data {
   padding: 15px 0;
   text-align: center;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget--data-label {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   display: block;
+  margin-bottom: 8px;
 }
 .cricket-wrapper .cricket-dashboard-view__count-widget--data-value {
-  font-size: 50px;
+  font-size: 32px;
   font-weight: 500;
   color: #777;
+}
+.cricket-wrapper .cricket-dashboard-view__count-widget--periodic-data {
+  display: block;
+  font-size: 16px;
+}
+.cricket-wrapper .cricket-dashboard-view__count-widget--last-date {
+  display: block;
+  font-size: 14px;
 }
 .cricket-wrapper .cricket-dashboard-view .zoom-widget-btn {
   text-decoration: none;
   color: #d3d3d3;
   font-size: 24px;
+}
+.cricket-wrapper .text-success {
+  color: #3c763d;
+}
+.cricket-wrapper .text-danger {
+  color: #b70b0b;
+}
+.cricket-wrapper .text-muted {
+  color: #777;
 }
 .cricket-wrapper .cricket-card {
   border-radius: 4px;
@@ -241,6 +260,9 @@
     left: 0;
     right: auto;
   }
+}
+.cricket-wrapper .cricket-zoom-in-modal {
+  background: transparent;
 }
 .cricket-wrapper .cricket-zoom-in-modal .modal-dialog {
   width: 96% !important;

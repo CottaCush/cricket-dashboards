@@ -3,6 +3,7 @@
   .cricket-dashboard-view {
     &__count-widget {
       background: #fff;
+      padding-bottom: 10px;
     }
 
     &__count-widget--data {
@@ -11,15 +12,26 @@
     }
 
     &__count-widget--data-label {
-      font-size: 20px;
+      font-size: 18px;
       text-transform: uppercase;
       display: block;
+      margin-bottom: 8px;
     }
 
     &__count-widget--data-value {
-      font-size: 50px;
+      font-size: 32px;
       font-weight: 500;
       color: #777;
+    }
+
+    &__count-widget--periodic-data {
+      display: block;
+      font-size: 16px;
+    }
+
+    &__count-widget--last-date{
+      display: block;
+      font-size: 14px;
     }
 
     .zoom-widget-btn {
@@ -27,5 +39,17 @@
       color: #d3d3d3;
       font-size: 24px;
     }
+  }
+
+  .text-success {
+    color: #3c763d;
+  }
+
+  .text-danger {
+    color: #b70b0b;
+  }
+
+  .text-muted {
+    color: #777;
   }
 }
