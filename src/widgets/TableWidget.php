@@ -46,8 +46,10 @@ class TableWidget extends BaseDashboardWidget
     private function renderTable()
     {
         echo Html::beginTag('table', ['class' => 'table table-striped']);
-        $this->renderTableHeader();
-        $this->renderTableBody();
+        if ($this->data) {
+            $this->renderTableHeader();
+            $this->renderTableBody();
+        }
         echo Html::endTag('table');
     }
 

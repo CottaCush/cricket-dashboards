@@ -88,6 +88,9 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
 
     protected function getDataColumns($data = [])
     {
+        if (!$this->data) {
+            return [];
+        }
         if (!$data) {
             $data = $this->data;
         }
