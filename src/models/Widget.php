@@ -81,7 +81,7 @@ class Widget extends BaseCricketModel implements CricketQueryableInterface
 
     /**
      * @author Olawale Lawal <wale@cottacush.com>
-     * @return Query|\CottaCush\Cricket\Report\Interfaces\QueryInterface
+     * @return \CottaCush\Cricket\Interfaces\QueryInterface|Query
      */
     public function getQuery()
     {

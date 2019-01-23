@@ -17,6 +17,7 @@ use CottaCush\Cricket\Models\BaseCricketModel;
  * @property int $created_by
  * @property string $last_updated_at
  * @property int $last_updated_by
+ * @property int $has_filters
  *
  * @property Widget[] $widgets
  */
@@ -60,6 +61,7 @@ class Dashboard extends BaseCricketModel
             'description' => 'Description',
             'created_at' => 'Created At',
             'last_updated_at' => 'Last Updated At',
+            'has_filters' => 'Has Filters'
         ];
     }
 

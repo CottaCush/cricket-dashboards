@@ -45,6 +45,8 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     ];
 
     public $dbConnection;
+    public $startDate;
+    public $endDate;
 
     public function init()
     {
@@ -76,7 +78,11 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
     protected function getData()
     {
         $parser = new SQLQueryBuilderParser();
-        $data = $parser->parse($this->model, [], $this->dbConnection, $this->queryFunction);
+        $placeHoldersValues = [
+            'startDate' => $this->startDate,
+            'endDate' => $this->endDate
+        ];
+        $data = $parser->parse($this->model, $placeHoldersValues, $this->dbConnection, $this->queryFunction);
         return $data;
     }
 
