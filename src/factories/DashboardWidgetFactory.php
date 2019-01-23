@@ -26,11 +26,16 @@ class DashboardWidgetFactory
     /**
      * @author Olawale Lawal <wale@cottacush.com>
      * @param CricketQueryableInterface $model
+     * @param array $extras
      * @return BaseDashboardWidget
      */
-    public function createWidget(CricketQueryableInterface $model)
+    public function createWidget(CricketQueryableInterface $model, $extras = [])
     {
-        $config = ['model' => $model, 'dbConnection' => $this->dbConnection];
+        $config = [
+            'model' => $model,
+            'dbConnection' => $this->dbConnection,
+        ];
+        $config = array_merge($config, $extras);
 
         switch ($model->type) {
             case BaseDashboardWidget::TYPE_TABLE:

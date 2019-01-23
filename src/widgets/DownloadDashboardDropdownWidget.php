@@ -28,7 +28,7 @@ class DownloadDashboardDropdownWidget extends Yii2BaseWidget
             'Download ' . Html::tag('span', '', ['class' => 'caret']),
             [
                 'id' => 'downloadBtn',
-                'class' => 'btn btn-default dropdown-toggle',
+                'class' => 'btn btn-default btn-sm dropdown-toggle',
                 'data-toggle' => 'dropdown',
                 'aria-haspopup' => 'true',
                 'aria-expanded' => 'false'

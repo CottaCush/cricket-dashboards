@@ -29,6 +29,8 @@ class DashboardViewWidget extends BaseCricketWidget
 
     /** @var Connection */
     public $dbConnection = null;
+    public $startDate = null;
+    public $endDate = null;
 
     /** @var DashboardWidgetFactory */
     private $factory;
@@ -96,10 +98,14 @@ class DashboardViewWidget extends BaseCricketWidget
     private function renderLocation($location)
     {
         $locationWidgets = ArrayHelper::getValue($this->locationalWidgets, $location);
+        $filterValues = [
+            'startDate' => $this->startDate,
+            'endDate' => $this->endDate
+        ];
 
         echo $this->beginDiv('row');
         foreach ($locationWidgets as $widget) {
-            $dashboardWidget = $this->factory->createWidget($widget);
+            $dashboardWidget = $this->factory->createWidget($widget, $filterValues);
             $dashboardWidget->renderWidget();
         }
         echo $this->endDiv();

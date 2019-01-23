@@ -35,6 +35,8 @@ class DefaultController extends BaseCricketController
     public function actionView($id = null)
     {
         $decodedId = Utils::decodeId($id);
+        $startDate = $this->getRequest()->get('startDate');
+        $endDate = $this->getRequest()->get('endDate');
 
         /** @var Dashboard $dashboard */
         $dashboard = Dashboard::getOne($decodedId);
@@ -46,6 +48,6 @@ class DefaultController extends BaseCricketController
             );
         }
 
-        return $this->render('view', ['dashboard' => $dashboard]);
+        return $this->render('view', ['dashboard' => $dashboard, 'startDate' => $startDate, 'endDate' => $endDate]);
     }
 }
