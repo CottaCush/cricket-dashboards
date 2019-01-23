@@ -11,6 +11,9 @@ class ScatterPlotWidget extends BaseChartsJsWidget
 {
     protected function getTransformedData()
     {
+        if (!$this->data) {
+            return ['datasets' => []];
+        }
         $columns = $this->getDataColumns();
         $datasets = [];
 

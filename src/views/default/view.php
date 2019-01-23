@@ -16,11 +16,13 @@ $this->params['breadcrumbs'] = [
 echo Html::beginTag('div', ['class' => 'row']);
 echo DownloadDashboardDropdownWidget::widget();
 
-echo DateRangePickerWidget::widget([
-    'startDate' => $startDate,
-    'endDate' => $endDate,
-    'action' => Url::toRoute(['', 'id' => $dashboard->id])
-]);
+if ($dashboard->has_filters) {
+    echo DateRangePickerWidget::widget([
+        'startDate' => $startDate,
+        'endDate' => $endDate,
+        'action' => Url::toRoute(['', 'id' => $dashboard->id])
+    ]);
+}
 echo Html::endTag('div');
 
 echo Html::beginTag('div', ['class' => 'cricket-wrapper']);

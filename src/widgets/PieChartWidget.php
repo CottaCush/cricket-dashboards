@@ -20,6 +20,9 @@ class PieChartWidget extends BaseChartsJsWidget
 
     protected function getTransformedData()
     {
+        if (!$this->data) {
+            return ['labels' => [], 'datasets' => []];
+        }
         $columns = $this->getDataColumns();
         $labels = ArrayHelper::getColumn($this->data, $columns[0]);
 
