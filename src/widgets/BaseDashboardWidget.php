@@ -83,7 +83,7 @@ abstract class BaseDashboardWidget extends Yii2BaseWidget
             'endDate' => $this->endDate
         ];
         $data = $parser->parse($this->model, $placeHoldersValues, $this->dbConnection, $this->queryFunction);
-        return $data;
+        return ArrayHelper::getValue($data, 'data');
     }
 
     protected function getDataColumns($data = [])
