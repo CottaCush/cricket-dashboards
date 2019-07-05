@@ -49,6 +49,10 @@ class TableWidget extends BaseDashboardWidget
         if ($this->data) {
             $this->renderTableHeader();
             $this->renderTableBody();
+        } else {
+            echo Html::beginTag('div', ['class' => 'text-center']);
+            echo Html::tag('i', "No records found for " . $this->model->name, ['class' => 'text-center']);
+            echo Html::endTag('div');
         }
         echo Html::endTag('table');
     }
